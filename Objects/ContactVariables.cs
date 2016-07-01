@@ -45,5 +45,9 @@ namespace AddressBook.Objects
     {
       return _instances;
     }
+    public static void DeleteAllContacts()
+    {
+      _instances.Clear();
+    }
   }
 }
