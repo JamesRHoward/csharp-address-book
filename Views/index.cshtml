@@ -1,18 +1,9 @@
 <a href="/"></a>
-@if (Model.count == 0) {
-  <h1>AddressBook</h1>
-}
+<h1>AddressBook</h1>
 <h2>Your Contacts</h2>
-@if (Model.count == 0) {
-  <h3>You currently have now contacts</h3>
-}
 @foreach (var name in Model) {
   <p>Name: @name.GetName()</p>
   <p>Address: @name.GetAddress()</p>
   <p>Phone Number: @name.GetPhoneNumber()</p>
 }
-@if (Model.Count == 0) {
-  <a href="/addContact">Add your first contact</a>
-} else {
-  <a href="/addContact">Add another contact</a>
-}
+<a href="/addContact">Add contact</a>

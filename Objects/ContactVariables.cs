@@ -6,17 +6,16 @@ namespace AddressBook.Objects
   {
     private string _name;
     private string _address;
-    private int _phoneNumber;
+    private string _phoneNumber;
 
     private static List<Contact> _instances = new List <Contact> {};
 
-    public Contact (string name, string address, int phoneNumber)
+    public Contact (string name, string address, string phoneNumber)
     {
       _name = name;
       _address = address;
       _phoneNumber = phoneNumber;
       _instances.Add(this);
-      _id = _instances.Count;
     }
     public string GetName()
     {
@@ -34,11 +33,11 @@ namespace AddressBook.Objects
     {
       _address = newAddress;
     }
-    public int GetPhoneNumber()
+    public string GetPhoneNumber()
     {
       return _phoneNumber;
     }
-    public void SetPhoneNumber(int newPhoneNumber)
+    public void SetPhoneNumber(string newPhoneNumber)
     {
       _phoneNumber = newPhoneNumber;
     }
