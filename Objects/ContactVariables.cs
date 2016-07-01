@@ -16,6 +16,7 @@ namespace AddressBook.Objects
       _address = address;
       _phoneNumber = phoneNumber;
       _instances.Add(this);
+      _id = _instances.Count;
     }
     public string GetName()
     {
