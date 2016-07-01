@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 namespace AddressBook
 {
-  public class HomeModule : NancyModuel
+  public class HomeModule : NancyModule
   {
     public HomeModule()
     {
       Get["/"] = _ => {
-        list<Contact> allContacts = Contact.GetAll();
+        List<Contact> allContacts = Contact.GetAll();
         return View["index.cshtml", allContacts];
       };
       Get["/contactForm"] = _ => {
